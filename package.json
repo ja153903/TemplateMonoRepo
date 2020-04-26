@@ -1,0 +1,14 @@
+{
+	"private": true,
+	"workspace": [
+		"packages/*"
+	],
+	"scripts": {
+		"fe": "yarn workspaces frontend start",
+		"be": "yarn workspaces backend start",
+		"start": "concurrently --kill-others-on-fail \"yarn fe\" \"yarn be\""
+	},
+	"dependencies": {
+		"concurrently": "^5.2.0"
+	}
+}
